@@ -19,11 +19,16 @@ std = []
 backtrace = []
 
 [dev-dependencies]
+divan = { version = "4.6.0", package = "codspeed-divan-compat" }
 futures = { version = "0.3", default-features = false }
 rustversion = "1.0.6"
 syn = { version = "2.0", features = ["full"] }
 thiserror = "2"
 trybuild = { version = "1.0.108", features = ["diff"] }
+
+[[bench]]
+name = "bench"
+harness = false
 
 [package.metadata.docs.rs]
 targets = ["x86_64-unknown-linux-gnu"]
